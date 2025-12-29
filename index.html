@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Rose | شاليهات فاخرة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Maison Rose</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav class="menu" id="menu">
+    <a href="#">الرئيسية</a>
+    <a href="#products">الشاليهات</a>
+    <a href="#">الحجز</a>
+    <a href="#">تواصل معنا</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-box">
+        <h1>تجربة إقامة راقية</h1>
+        <p>شاليهات فاخرة بخصوصية تامة وتصميم عصري</p>
+        <button onclick="scrollToProducts()">استعرض الشاليهات</button>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+    <h2>الشاليهات المتاحة</h2>
+
+    <div class="products-grid">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+            <h3>الشاليه الملكي</h3>
+            <p>مسبح خاص · خدمات VIP</p>
+            <span>1200 ريال / ليلة</span>
+            <button onclick="openOrder('الشاليه الملكي',1200)">طلب الآن</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+            <h3>الشاليه الفاخر</h3>
+            <p>تصميم عصري · جلسات راقية</p>
+            <span>900 ريال / ليلة</span>
+            <button onclick="openOrder('الشاليه الفاخر',900)">طلب الآن</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
+            <h3>الشاليه العائلي</h3>
+            <p>مساحات واسعة · راحة كاملة</p>
+            <span>700 ريال / ليلة</span>
+            <button onclick="openOrder('الشاليه العائلي',700)">طلب الآن</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ORDER MODAL -->
+<div class="modal" id="orderModal">
+    <div class="modal-box">
+        <span class="close" onclick="closeOrder()">×</span>
+        <h3 id="productName"></h3>
+
+        <label>عدد الليالي</label>
+        <input type="number" id="nights" min="1" value="1" onchange="updateTotal()">
+
+        <p class="total">الإجمالي: <strong><span id="total"></span> ريال</strong></p>
+
+        <button class="confirm">تأكيد الطلب</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h4>تابعنا</h4>
+            <div class="social">
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
+                <a href="#">Snapchat</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>البريد الإلكتروني</h4>
+            <p>info@maisonrose.com</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>رقم التواصل</h4>
+            <p>+966 5XX XXX XXX</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Maison Rose – جميع الحقوق محفوظة
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
